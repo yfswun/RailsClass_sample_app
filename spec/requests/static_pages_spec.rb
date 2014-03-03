@@ -74,6 +74,14 @@ describe "Static pages" do
       visit '/static_pages/contact'
       expect(page).to have_css("dl dd")
     end
+    it "CSS should have h1.page-title" do
+      visit '/assets/static_pages.css'
+      expect(page).to have_content('h1.page-title')
+    end
+    it "CSS should have .main" do
+      visit '/assets/static_pages.css'
+      expect(page).to have_content('.main')
+    end
   end
 
 end
